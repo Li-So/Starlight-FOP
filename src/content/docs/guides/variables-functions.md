@@ -72,13 +72,7 @@ Change the code above so that it counts all the way to four by doing the followi
 ## 2.2 Variables in functions
 ### 2.2.1 The Pythagorean Theorem
 
-Don't worry, we won't deep dive into mathematics in this course, but it makes for a good example in this case. We'll be writing everything inside of a function for the coming task, but there will be explanations. According to the Pythagorean theorem, in a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares on the lengths of the other two sides. This can be expressed via the formula:
-
-$a^2+b^2=c^2$
-
-We will be using it to determine the length of the hypotenuse in a given triangle:
-
-${\sqrt {a^2 + b^2}} = {\sqrt {c^2}}$
+Don't worry, we won't deep dive into mathematics in this course, but it makes for a good example in this case. We'll be writing everything inside of a function for the coming task, but there will be explanations. According to the Pythagorean theorem, in a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares on the lengths of the other two sides. If you'd like a quick reminder, [read here](https://en.wikipedia.org/wiki/Pythagorean_theorem).
 
 Below is one way to write the function for a triangle with the side lengths 3 and 4.
 
