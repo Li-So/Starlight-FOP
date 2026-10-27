@@ -6,6 +6,7 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
     site: "https://Li-So.github.io",
+    base: "/Starlight-FOP",
     integrations: [
         starlight({
             title: "Foundations of Programming",
