@@ -1,0 +1,233 @@
+---
+title: 'Installation'
+description: 'Walkthroughs of how to install important components of the course.'
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+
+{/* Image imports */}
+import { Image } from 'astro:assets';
+import empty_new_folder from '/src/assets/img/chapter-1/empty_new_folder.png';
+import open_new_folder from '/src/assets/img/chapter-1/vscode_open_folder.png'
+import download_node from '/src/assets/img/chapter-1/download_nodejs.png'
+
+There are a few tools we need before we can properly get started. There are a few differences between operating system installs, so make sure you are looking at the correct one. This section is best to finish at the beginning of the course as it may be time-wise costly later on.
+
+:::tip[Why these tools?]{icon="download"}
+Each of these tools will be either integral or very useful during the course. You could think of them like this:
+- **VSCode** - What you'll use to write code.
+- **Git** - Advanced history management. Allows you to go back in time if something went poorly.
+- **NodeJS** - The runtime environment that allows us to run JavaScript code locally. Reads the JavaScript written in your VSCode and runs it.
+- **Github Desktop** - Provides a user interface for Git to make it more approachable for beginners.
+
+:::
+
+## VSCode
+
+This is the code editor you'll be using for this entire course (and often while doing web development in general). VSCode is only really an editor and does not come with _all_ the tools we need (something usually featured in an _IDE (integrated development environment)_ ) so we'll need to tweak it somewhat to use it. It is however, **very** popular for coding in a variety of languages, which is why we are sticking to it in this introductory course.
+
+You'll find the download link here for most platforms: [Download VSCode](https://code.visualstudio.com/Download)
+
+Choose one that is appropriate for your computer (the largest download buttons should also work):
+
+<Tabs>
+	<TabItem label='Windows'>
+		Most likely, you have _x64_, if you want the simplest version choose the
+		_User Installer System_.
+	</TabItem>
+	<TabItem label='Linux'>
+		This depends on your distro, but if you use Linux you probably know ;)
+	</TabItem>
+	<TabItem label='Mac'>
+		Assuming the "big" download button doesn't work, it might depend on your
+		CPU. Assuming it doesn't work, _try the Intel version_ (since I am under the
+		impression most have Apple Silicon).
+	</TabItem>
+</Tabs>
+
+---
+
+Once you've downloaded it and traversed through the guides, you need somewhere to put your code. Create a folder somewhere on your computer (e.g. inside of Documents) and name it something appropriate (**not** "New Folder"):
+
+<Image
+    class='centered'
+	src={empty_new_folder}
+	alt=''
+/>
+
+Enter it via VSCode (menu should be in the top left):
+
+<Image
+	class='centered'
+	src={open_new_folder}
+	alt=''
+/>
+
+Now you have somewhere to put all your code and your projects. My suggestion for most assignments is to divide assignments into either separate files or entirely separate folders. This will make it easier for you to find them later. Personally, I like trying to maintain this type of folder structure:
+
+<FileTree>
+	- Desktop 
+        - ... 
+    - **Projects** 
+    - JU Here you could store all of your JU projects and **never** lose them ;)
+        - this_website.astro
+        - s3cret_w3bs1t3.svelte
+        - ...
+    - Documents 
+        - ...
+</FileTree>
+
+## Git
+
+This version control software is integral later in the course (and for any future programming you do), so ensure the install works from the very beginning.
+
+You'll find the download link here for most platforms: [Download Git](https://git-scm.com/downloads)
+
+<Tabs>
+	<TabItem label='Windows'>
+    <Steps>
+    1. Download the latest _x64_ version featured at the top (or via the standalone installer), unless you happen to have ARM64.
+
+    2. Test that it works via either CMD or Windows Powershell and write: `git --version`.
+
+    3. Hopefully it should print the current git version, which means you've succeeded.
+    </Steps>
+
+    </TabItem>
+
+
+    <TabItem label='Linux'>
+    Git should already be installed, but if it isn't it will depend on your chosen flavour of Linux.
+    <Steps>
+    1. Test that it works via your chosen terminal and write: `git --version`.
+
+    2. Hopefully it should print the current git version, which means you've succeeded.
+
+    3. Should it be that it failed, check the package manager of your distribution.
+    </Steps>
+
+    </TabItem>
+
+
+    <TabItem label='Mac'>
+    There are two alternatives for Mac I'll mention in this guide, starting with the simplest.
+
+    <Tabs>
+        <TabItem label="The Apple store">
+        <Steps>
+        
+        1. Apple should ship a version of Git on their store. Search for it, and click to download.
+        
+        2. Test that it works via the Terminal app on Mac and write: `git --version`.
+        
+        3. Hopefully it should print the current git version, which means you've succeeded.
+        </Steps>
+        </TabItem>
+
+        <TabItem label="The Terminal">
+        <Steps>
+        1. Apple includes git another piece of software called XCode, which includes development tools.
+
+        2. On your Mac, search for _Terminal_.
+        
+        3. Inside of your terminal, paste: `xcode-select --install` and click enter.
+        
+        4. Test that it works via the Terminal app on Mac and write: `git --version`.
+        
+        5. Hopefully it should print the current git version, which means you've succeeded.
+        </Steps>
+        </TabItem>
+    </Tabs>
+
+</TabItem>
+
+</Tabs>
+
+---
+
+## NodeJS
+
+NodeJS is a JavaScript runtime environment that will let us run JavaScript inside of our VSCode setup. You'll also be using it later in web development courses.
+
+You'll find the download link here for most platforms: [Download NodeJS](https://nodejs.org/en/download)
+
+I suggest going for the prebuilt Node.js packages found a little further down the page, here:
+
+<Image
+    class='centered'
+	src={download_node}
+	alt=''
+/>
+
+<Tabs>
+    <TabItem label='Windows'>
+        <Steps>
+        1. I suggest getting the prebuilt Node.js package with system architecture fitting your computer's specifications.
+        2. Should be rather simple via a provided Windows Installer.
+        3. Test that it works via either CMD or Windows Powershell and write: `node --version`. Hopefully it should print the current node version, which means you've succeeded.
+        </Steps>
+    </TabItem>
+    
+    
+    <TabItem label='Linux'>
+        <Steps>
+        1. Should be available on your distro's package manager, if not there is a standalone binary file you could use.
+        2. Test that it works via your chosen terminal and write: `node --version`. 
+        3. Hopefully it should print the current node version, which means you've succeeded.
+        </Steps>
+    </TabItem>
+    
+    
+    <TabItem label='Mac'>
+        <Steps>
+        1. I suggest getting the prebuilt Node.js package with system architecture fitting your computer's specifications.
+        2. Should be rather simple via a provided macOS Installer.
+        3. Test that it works via your Terminal app on Mac and write: `node --version`. Hopefully it should print the current node version, which means you've succeeded.
+        </Steps>
+    </TabItem>
+
+</Tabs>
+
+---
+
+Now that you have node, you can actually run any JavaScript files on your computer using the command `node <yourFile>` in your terminal. While perfectly valid, we will install an extension later to make this process a little more streamlined.
+
+## Github Desktop
+
+Github Desktop is a software that will make interactions with Github easier for those who may not be well acquainted with using git and want an easier way to get started as compared to the command-line.
+
+You'll find the link here for Windows & Mac: [Download Github Desktop](https://desktop.github.com/download/)
+
+Once you've downloaded it, try opening it up to see if it works!
+
+## Hitting the Panic Button
+
+Assuming nothing works for one reason or another, there are a few online JavaScript editors which will allow you to get started on tasks:
+
+<Tabs>
+    <TabItem label='p5js online editor'>
+    Tool link: [p5js online editor](https://editor.p5js.org/)
+        <Steps>
+            1. By removing the draw and setup functions (blank textbox), you can use it as a "normal" code editor.
+            
+            2. Allows you to save projects if you are signed up
+            
+            3. **DOES** work for p5js code.
+        </Steps>
+    </TabItem>
+
+    <TabItem label='Programiz'>
+    Tool link: [Programiz](https://www.programiz.com/javascript/online-compiler/)
+    Simple enough and allows you to run standard JavaScript code.
+    Will **NOT** work for p5js code.
+
+    </TabItem>
+</Tabs>
+
+---
+
+:::danger
+While browser-based code editors like these are easy to get started in, they are seldom used in true development environments, which is why we'll avoid them for the most part.
+:::
