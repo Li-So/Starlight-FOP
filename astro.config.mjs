@@ -15,6 +15,18 @@ export default defineConfig({
         // Relative path to your custom CSS file
         "./src/styles/custom.css",
       ],
+      social: [
+        {
+          icon: "open-book",
+          label: "Canvas",
+          href: "https://ju.instructure.com/",
+        },
+        {
+          icon: "question",
+          label: "Padlet",
+          href: "https://padlet.com/padnanometer174/feedback-wall-fop-2026-s024pgyq67za8k2u6dev",
+        },
+      ],
       sidebar: [
         {
           label: "Start Here",
