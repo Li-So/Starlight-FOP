@@ -3,39 +3,38 @@ title: Welcome to Foundations of Programming!
 description: Homepage of Foundations of Programming course.
 template: splash # Remove or comment out this line to display the site sidebar on this page.
 hero:
-  tagline: This is the website you’ll use to access both worksheets and information for the Foundations of Programming course in the fall of 2026. Happy to see you here! 
+  tagline: This is the website you’ll use to access both worksheets and information for the Foundations of Programming course in the fall of 2026. Happy to see you here!
   image:
     file: ../../assets/houston.webp
   actions:
     - text: Quickstart
-      link: /start-here/introduction
+      link: start-here/introduction
       icon: right-arrow
     - text: Made via Starlight!
       link: https://starlight.astro.build
       icon: external
       variant: minimal
 ---
-import { Card, CardGrid } from '@astrojs/starlight/components';
 
-
-
+import { Card, CardGrid } from "@astrojs/starlight/components";
 
 <CardGrid stagger>
 	<Card title="Guides" icon="rocket">
 		This is the main part you'll interact with on this website. It proceeds step-by-step through various programming topics and includes both follow-along tasks as well as problems to solve.
 	</Card>
 
-	<Card title="Reference" icon="open-book">
-		Reference pages are more compact sources of documentation and information deemed appropriate for this course. Course information, suitable external sources and tips will be gathered here.
-	</Card>
+    <Card title="Reference" icon="open-book">
+    	Reference pages are more compact sources of documentation and information deemed appropriate for this course. Course information, suitable external sources and tips will be gathered here.
+    </Card>
 
-	<Card title="Course Information" icon="open-book">
-		Most announcements will be sent via [Canvas](https://ju.instructure.com/), so make sure to keep an eye on Canvas as well as your school emails. The schedule for this course can be found [here](https://cloud.timeedit.net/ju/web/open/ri1Q49F40E2Z07Q0FBQD9C4Zt05AD2A83AQ0A5Dd1t79570DZ408y1vQQY9Z5Xp0Y54Yw7Q7Z22c.html). 
-	</Card>
+    <Card title="Course Information" icon="open-book">
+    	Most announcements will be sent via [Canvas](https://ju.instructure.com/), so make sure to keep an eye on Canvas as well as your school emails. The schedule for this course can be found [here](https://cloud.timeedit.net/ju/web/open/ri1Q49F40E2Z07Q0FBQD9C4Zt05AD2A83AQ0A5Dd1t79570DZ408y1vQQY9Z5Xp0Y54Yw7Q7Z22c.html).
+    </Card>
 
-	<Card title="Feedback & Contact" icon="open-book">
-		If you have any questions, thoughts on improvements or simply want to discuss something, the fastest ways are to send me an email or post a comment anonymously:
-		- linus.sonnerhed@ju.se 
-		- [Padlet (anonymous if you don't log in!)](https://padlet.com/padnanometer174/feedback-wall-fop-2026-s024pgyq67za8k2u6dev)
-	</Card>
+    <Card title="Feedback & Contact" icon="open-book">
+    	If you have any questions, thoughts on improvements or simply want to discuss something, the fastest ways are to send me an email or post a comment anonymously:
+    	- linus.sonnerhed@ju.se
+    	- [Padlet (anonymous if you don't log in!)](https://padlet.com/padnanometer174/feedback-wall-fop-2026-s024pgyq67za8k2u6dev)
+    </Card>
+
 </CardGrid>

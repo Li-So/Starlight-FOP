@@ -7,6 +7,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   site: "https://li-so.github.io",
   base: "/Starlight-FOP",
+  trailingSlash: "never",
   integrations: [
     starlight({
       title: "Foundations of Programming",
