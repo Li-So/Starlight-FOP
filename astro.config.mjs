@@ -51,6 +51,7 @@ export default defineConfig({
               label: "Variables & Functions",
               slug: "guides/variables-functions",
             },
+            { label: "Conditionals", slug: "guides/conditionals" },
           ],
         },
       ],
