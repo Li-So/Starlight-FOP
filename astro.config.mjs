@@ -52,6 +52,7 @@ export default defineConfig({
               slug: "guides/variables-functions",
             },
             { label: "Conditionals", slug: "guides/conditionals" },
+            { label: "Git & Github", slug: "guides/git-github" },
           ],
         },
       ],
