@@ -6,12 +6,7 @@ description: "Walkthroughs of how to install important components of the course.
 import { Tabs, TabItem } from "@astrojs/starlight/components";
 import { Steps } from "@astrojs/starlight/components";
 import { FileTree } from "@astrojs/starlight/components";
-
-{/* Image imports */}
-import { Image } from 'astro:assets';
-import empty_new_folder from '/src/assets/chapter-1/empty_new_folder.png';
-import open_new_folder from '/src/assets/chapter-1/vscode_open_folder.png'
-import download_node from '/src/assets/chapter-1/download_nodejs.png'
+import DynamicImageComponent from '/src/components/DynamicImageComponent.astro'
 
 There are a few tools we need before we can properly get started. There are a few differences between operating system installs, so make sure you are looking at the correct one. This section is best to finish at the beginning of the course as it may be time-wise costly later on.
 
@@ -34,36 +29,49 @@ You'll find the download link here for most platforms: [Download VSCode](https:/
 Choose one that is appropriate for your computer (the largest download buttons should also work):
 
 <Tabs>
-  <TabItem label="Windows">
-    Most likely, you have _x64_, if you want the simplest version choose the
-    _User Installer System_.
-  </TabItem>
-  <TabItem label="Linux">
-    This depends on your distro, but if you use Linux you probably know ;)
-  </TabItem>
-  <TabItem label="Mac">
-    Assuming the "big" download button doesn't work, it might depend on your
-    CPU. Assuming it doesn't work, _try the Intel version_ (since I am under the
-    impression most have Apple Silicon).
-  </TabItem>
+    <TabItem label="Windows">
+        Most likely, you have _x64_, if you want the simplest version choose the
+        _User Installer System_.
+    </TabItem>
+    <TabItem label="Linux">
+        This depends on your distro, but if you use Linux you probably know ;)
+    </TabItem>
+    <TabItem label="Mac">
+        Assuming the "big" download button doesn't work, it might depend on your
+        CPU. Assuming it doesn't work, _try the Intel version_ (since I am under
+        the impression most have Apple Silicon).
+    </TabItem>
 </Tabs>
 
 ---
 
 Once you've downloaded it and traversed through the guides, you need somewhere to put your code. Create a folder somewhere on your computer (e.g. inside of Documents) and name it something appropriate (**not** "New Folder"):
 
-<Image class="centered" src={empty_new_folder} alt="" />
+<DynamicImageComponent
+    imagePath="/src/assets/chapter-1/empty_new_folder.png"
+    altText="A picture of an empty windows folder."
+/>
 
 Enter it via VSCode (menu should be in the top left):
 
-<Image class="centered" src={open_new_folder} alt="" />
+
+<DynamicImageComponent
+    imagePath="/src/assets/chapter-1/vscode_open_folder.png"
+    altText="A picture of an open folder in VSCode"
+/>
 
 Now you have somewhere to put all your code and your projects. My suggestion for most assignments is to divide assignments into either separate files or entirely separate folders. This will make it easier for you to find them later. Personally, I like trying to maintain this type of folder structure:
 
 <FileTree>
-  - Desktop - ... - **Projects** - JU Here you could store all of your JU
-  projects and **never** lose them ;) - this_website.astro -
-  s3cret_w3bs1t3.svelte - ... - Documents - ...
+    - Desktop 
+    - ... 
+    - **Projects** 
+        - JU Here you could store all of your JU projects and **never** lose them ;) 
+        - this_website.astro 
+        - s3cret_w3bs1t3.svelte 
+        - ... 
+    - Documents 
+        - ...
 </FileTree>
 
 ## Git
@@ -142,7 +150,10 @@ You'll find the download link here for most platforms: [Download NodeJS](https:/
 
 I suggest going for the prebuilt Node.js packages found a little further down the page, here:
 
-<Image class="centered" src={download_node} alt="" />
+<DynamicImageComponent
+    imagePath="/src/assets/chapter-1/download_nodejs.png"
+    altText="A screenshot of the download button for NodeJS."
+/>
 
 <Tabs>
     <TabItem label='Windows'>
