@@ -13,7 +13,7 @@ Github is a cloud-based hosting system that works **with** Git. Essentially, you
 This chapter will introduce what both Git and Github are in more detail, as well as some tutorials to get used to them.
 
 :::danger
-This chapter may become especially confusing as it is a brand new topic in the middle of learning JavaScript. The reason for this abrupt break is due to a group assignment. I **strongly** suggest reviewing the slides and using the [training website](https://learngitbranching.js.org/) to see the structure visualized. The optional content [Shells and Terminals](../optional_content/shells-terminals) may be **very** helpful to read through, though not essential.
+This chapter may become especially confusing as it is a brand new topic in the middle of learning JavaScript. The reason for this abrupt break is due to a group assignment. I **strongly** suggest reviewing the slides and using the [training website](https://learngitbranching.js.org/) to see the structure visualized. The optional content [Shells and Terminals](/optional_content/shells-terminals) may be **very** helpful to read through, though not essential.
 :::
 
 ## 4.2 Git
@@ -47,15 +47,15 @@ Above, I created a new folder _testGit_ in my `home` directory (file explorer or
 If you instead opt to actively use Github Desktop, create a [Github Account](https://github.com/signup?source=form-home-signup&user_email=). Sign in and you should see the following:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_start.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_start.png"
+    altText="A picture of an empty windows folder."
 />
 
 Using Github desktop, we instead press `Create a new repository on our local drive` and we should see this window:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_new_repo.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_new_repo.png"
+    altText="A picture of an empty windows folder."
 />
 
 From here you may choose:
@@ -75,17 +75,17 @@ For this example using Github Desktop, I'll use the repository name `fantastic-d
 This is where Github Desktop shows all your options and tools for working with your repository using git. Let's walk through it:
 
 - **In the top left**, going from left to right you can see(_note, beneath file, edit, etc_):
-  - The repository name - fantastic dragon.
-  - The branch you are on - main (more on branches below).
-  - **Publish repository** - Will upload your project to Github. More on that later.
+    - The repository name - fantastic dragon.
+    - The branch you are on - main (more on branches below).
+    - **Publish repository** - Will upload your project to Github. More on that later.
 - _In the center_
-  - Currently it displays no local changes, as we've yet to do much in the repository.
-  - Open your repository in your external editor - A fast way to open up VSCode and get to work.
-  - View the files of your repository in your File Manager - A fast way to open the repository in your files.
+    - Currently it displays no local changes, as we've yet to do much in the repository.
+    - Open your repository in your external editor - A fast way to open up VSCode and get to work.
+    - View the files of your repository in your File Manager - A fast way to open the repository in your files.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_started_repo.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_started_repo.png"
+    altText="A picture of an empty windows folder."
 />
 
 ### 4.2.2 Commit
@@ -136,15 +136,15 @@ Sometimes you will see `git add .` or `git add *`. The first means to add all ch
 Let's do the equivalent in Github Desktop. We'll open the repository (either on our own, via the `open external editor` button) and create a new textfile. We'll write the same text (`Hello! My name is...`) and save.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_hello_world_txt.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_hello_world_txt.png"
+    altText="A picture of an empty windows folder."
 />
 
 Returning to Github Desktop, we can see it displays the changes we have made since last time. To commit, we simply fill a commit message in the bottom right, a longer description if required, and press `commit to main`. The changes are now committed!
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_commit.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_commit.png"
+    altText="A picture of an empty windows folder."
 />
 
 ### 4.2.3 Branch
@@ -172,15 +172,15 @@ Use `git add helloWorld.txt` to add all your changes and use `git commit -m "Add
 Let's try this in Github Desktop. If you click the button currently displaying **main** next to our repository name, you'll see a new button `New branch`. Click it!
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_add_name_create.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_add_name_create.png"
+    altText="A picture of an empty windows folder."
 />
 
 The following options should show. Fill in the **add-name** branch name and create the branch. This branch is based on the **main** branch just like when only using git. We can easily switch branch by clicking the appropriate branch under the same menu we found `New branch`. Github Desktop will display which is our current branch.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_add_name_confirm.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_add_name_confirm.png"
+    altText="A picture of an empty windows folder."
 />
 
 Open the repository in VSCode and add your name to the text file from earlier:
@@ -192,8 +192,8 @@ Hi! My name is Linus!
 Return to Github Desktop and commit!
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_add_name_vscodium.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_add_name_vscodium.png"
+    altText="A picture of an empty windows folder."
 />
 
 ### 4.2.4 Merge
@@ -203,8 +203,8 @@ Return to Github Desktop and commit!
 Now we have some changes on the branch **add-name**, changes we want to our **main** branch. To do this we can use `git merge` via the following:
 
 - Make sure you are on the **main** branch
-  - You can check branch you are on via `git branch`, which will display the existing local branches as well as your current branch via an asterisk `*`.
-  - You can switch branch using `git checkout <branch-name>`
+    - You can check branch you are on via `git branch`, which will display the existing local branches as well as your current branch via an asterisk `*`.
+    - You can switch branch using `git checkout <branch-name>`
 - Once on the **main** branch, write `git merge add-name`: This will merge **add-name** into your **main** branch.
 
 Perfect! Now we have the name we added from our **add-name** branch in our **main** branch. Double check the textfile to make sure this is true.
@@ -216,15 +216,15 @@ Perfect! Now we have the name we added from our **add-name** branch in our **mai
 To achieve the equivalent in Github Desktop, click the current branch to see the menu observed earlier. Note that at the very bottom of the branch menu, there is a button `Choose a branch to merge into main` (assumes you are currently on main). Once clicked and confirmed, the merge is complete!
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_choose_branch_merge.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_choose_branch_merge.png"
+    altText="A picture of an empty windows folder."
 />
 
 You will also receive a small message noting that the merge was successful.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/successful_merge.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/successful_merge.png"
+    altText="A picture of an empty windows folder."
 />
 
 ### 4.2.5 Rebase
@@ -243,9 +243,9 @@ Here's an example you can do to try it out:
 2. Switch branch to **add-name** and make a different file with content of your choosing.
 3. Now go back to the **main** branch and write:
    `git rebase add-name`. What happens?
-   - In essence, we've now rebased our **main** branch on top of the **add-name** branch
-   - We have all the features from add-name
-   - You can get more specific and use `git rebase add-name main` but there is no difference compared to if you're on **main** using `git rebase add-name`.
+    - In essence, we've now rebased our **main** branch on top of the **add-name** branch
+    - We have all the features from add-name
+    - You can get more specific and use `git rebase add-name main` but there is no difference compared to if you're on **main** using `git rebase add-name`.
 
 ---
 
@@ -254,15 +254,15 @@ Here's an example you can do to try it out:
 Perform similar actions as described in the git guide above, but using Github Desktop to achieve them. To rebase (step three of the git guide above) when using Github Desktop, you'll have to go under one of the top-most options (same row as `file` and `edit`) and look for `branch`. Click it, and choose the `Rebase current branch option`. If you are on the **main** branch, the next section ought to look like this:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_rebase.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_rebase.png"
+    altText="A picture of an empty windows folder."
 />
 
 Despite choosing to rebase, there are other options shown, including merge, squash & merge and rebase. While merge and rebase are both familiar, squash and merge may not be. In short, it is a method of _squashing_ multiple commits into one and merging that commit. For now, choose rebase and click the button to perform the rebase.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_rebase_options.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_rebase_options.png"
+    altText="A picture of an empty windows folder."
 />
 
 The rebase should now be complete and there should be a success message similar to the one we received when merging!
@@ -272,27 +272,27 @@ The rebase should now be complete and there should be a success message similar 
 Git has a lot of different commands that are helpful in a variety of situations. I am not going to list them all here, nor their full use, but here are some useful things you may find a use for which you can search for later.
 
 - `git commit --amend`
-  - Allows you to add things to your last commit in case you forgot files or want to change the commit message
+    - Allows you to add things to your last commit in case you forgot files or want to change the commit message
 - `git commit -a`
-  - Stage AND commit all of your changes
-  - Same as running `git add .` and then `git commit`
-  - **ONLY APPLIES TO TRACKED FILES.**
-  - Don't forget to add a commit message!
+    - Stage AND commit all of your changes
+    - Same as running `git add .` and then `git commit`
+    - **ONLY APPLIES TO TRACKED FILES.**
+    - Don't forget to add a commit message!
 - `git stash`
-  - Allows you to save your _uncommitted_ changes if you want to go to a separate branch to do some separate work
-  - You can get them back via `git stash pop`
-  - Or drop them via git stash drop
+    - Allows you to save your _uncommitted_ changes if you want to go to a separate branch to do some separate work
+    - You can get them back via `git stash pop`
+    - Or drop them via git stash drop
 - `git diff`
-  - Shows all the changes you've made (not staged)
-  - Alternatively `git diff --staged` shows what is staged but not committed
+    - Shows all the changes you've made (not staged)
+    - Alternatively `git diff --staged` shows what is staged but not committed
 - `git log`
-  - Shows all the previous commits.
+    - Shows all the previous commits.
 - `git checkout -b <branch-name>`
-  - Effectively like `git branch <branch-name>` and `git checkout <branch-name>` in one command
+    - Effectively like `git branch <branch-name>` and `git checkout <branch-name>` in one command
 - `git clean`
-  - Remove untracked files from your working directory
+    - Remove untracked files from your working directory
 - `git reset`
-  - Unstage changes or revert your working directory to the previous commit
+    - Unstage changes or revert your working directory to the previous commit
 
 :::note[Under construction!]{icon="rocket"}
 This section will likely move to the reference section in the future.
@@ -309,8 +309,8 @@ We will now begin sharing our work by reviewing the methods of storing our git r
 This is the dashboard view of Github, which is most likely the first thing you will encounter once you log in.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_dashboard.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_dashboard.png"
+    altText="A picture of an empty windows folder."
 />
 
 Clicking the hamburger menu icon (the three lines in the top left) will allow you to navigate most of the website. For now though, try to find the `+` button towards the top right of the website. Clicking it should reveal _New repository_. Click it!
@@ -318,61 +318,61 @@ Clicking the hamburger menu icon (the three lines in the top left) will allow yo
 You should now find yourself here:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/new_github_repository.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/new_github_repository.png"
+    altText="A picture of an empty windows folder."
 />
 
 Let's walk through all the options visible on this page:
 
 - **Repository name**
-  - Choose a name for your repository, using `-` as spaces (e.g. test-repository).
-  - If you don't care much about what to name it (if you're experimenting) then you can use their standard name marked in green under the text-bar (suggested by Github).
+    - Choose a name for your repository, using `-` as spaces (e.g. test-repository).
+    - If you don't care much about what to name it (if you're experimenting) then you can use their standard name marked in green under the text-bar (suggested by Github).
 - **Description**
-  - Choose some form of description for your project.
-  - Keep it clear, keep it concise.
+    - Choose some form of description for your project.
+    - Keep it clear, keep it concise.
 - **Visibility**
-  - Private or /public, if /public anyone can view it
-  - If you're doing it outside of a task, you might want to put it on private
-    - But if it **is** for a task, make sure it is /public (otherwise I cannot grade)
+    - Private or /public, if /public anyone can view it
+    - If you're doing it outside of a task, you might want to put it on private
+        - But if it **is** for a task, make sure it is /public (otherwise I cannot grade)
 - **Template**
-  - Sometimes you need the same starting files as another project, and in those cases a template is good.
-  - You won't need to think about it during this course.
+    - Sometimes you need the same starting files as another project, and in those cases a template is good.
+    - You won't need to think about it during this course.
 - **README**
-  - Effectively a longer description.
-  - Usually contains what the project is, how to use it etc.
-  - Documentation for your project
+    - Effectively a longer description.
+    - Usually contains what the project is, how to use it etc.
+    - Documentation for your project
 - **.gitignore**
-  - Things for git to ignore in your project
-  - Usually things like:
-    - Your own system files
-    - Your own virtual environments
-    - Packages used in a project (you leave a list of things to install and let the user install them)
+    - Things for git to ignore in your project
+    - Usually things like:
+        - Your own system files
+        - Your own virtual environments
+        - Packages used in a project (you leave a list of things to install and let the user install them)
 - **License**
-  - How are others allowed to use your code?
-  - There are a bunch, you can google each of them on your own
+    - How are others allowed to use your code?
+    - There are a bunch, you can google each of them on your own
 
 For now, we'll just fill in a name and make it private. We will now find ourselves here:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/setup_new_repository.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/setup_new_repository.png"
+    altText="A picture of an empty windows folder."
 />
 
 Let's similarly walk through everything on this page.
 
 - **Codespaces**
-  - This option will start a cloud development environment (an alternative to coding in VSCode), though this is not very common in most professional settings.
+    - This option will start a cloud development environment (an alternative to coding in VSCode), though this is not very common in most professional settings.
 - **Invite collaborators**
-  - If you want to add others to the project immediately, you can do so via the _invite collaborators_ button.
-  - Not necessary in this case.
+    - If you want to add others to the project immediately, you can do so via the _invite collaborators_ button.
+    - Not necessary in this case.
 - **Quick setup**
-  - As it states, more so if you've done this before. Provided you have **Github Desktop** you can click _Set up in Desktop_ to quickly get the repository on your local machine.
+    - As it states, more so if you've done this before. Provided you have **Github Desktop** you can click _Set up in Desktop_ to quickly get the repository on your local machine.
 - **New repository on command line**
-  - If you don't already have a local repository on your computer that you want to push, you can copy the block of code and paste it in your terminal.
-  - Now you have the repository locally!
+    - If you don't already have a local repository on your computer that you want to push, you can copy the block of code and paste it in your terminal.
+    - Now you have the repository locally!
 - **Push an existing repository from the command line**
-  - If you already had a local repository, you can copy the block of code and run it in the same repository as your local one.
-  - Keep in mind, you may face **conflicts** if you added a README or something similar, as the content will be different.
+    - If you already had a local repository, you can copy the block of code and run it in the same repository as your local one.
+    - Keep in mind, you may face **conflicts** if you added a README or something similar, as the content will be different.
 
 ---
 
@@ -385,22 +385,22 @@ For now, we will use **New repository on command line**. Copy the code block and
 #### Github Desktop
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_github_potential_funicular.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_github_potential_funicular.png"
+    altText="A picture of an empty windows folder."
 />
 
 To achieve the same result using Github Desktop, click the `Current Repository` button far to the top left of Github Desktop. Click the `Add` button.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_add_repo.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_add_repo.png"
+    altText="A picture of an empty windows folder."
 />
 
 You can either log in via Github.com and choose your repository from there, or provide the URL (the link / web address) to the repository. Choose where you want the repository to be stored in `Local path`.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_clone.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_clone.png"
+    altText="A picture of an empty windows folder."
 />
 
 The repository should now be on your local machine!
@@ -414,13 +414,13 @@ Now that we have the project locally, let's try to make some changes to it. Open
 Now that we have made a change in our _local_ repository, you need to **push** that change to the **online** (remote) repository (since it doesn't have your commits). We can achieve that by by using `git push`. If you now check github under the **commits** button (under the _green code button_), you should see the commits:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/pushed_js_file.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/pushed_js_file.png"
+    altText="A picture of an empty windows folder."
 />
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/past_commits.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/past_commits.png"
+    altText="A picture of an empty windows folder."
 />
 
 To go back to the repository overview, simply click the `< > Code` button to the top left.
@@ -444,8 +444,8 @@ This will be more important as you start collaborating, but we will simulate tha
 Go into Github and press the `Add file` button, selecting the option to `Create new file`. button (right next to the _green code button_). This should take you to an online editor:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_online_editor.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_online_editor.png"
+    altText="A picture of an empty windows folder."
 />
 
 In this example, the name and some content is already filled in. Now click the **green commit button in the right corner**.
@@ -457,8 +457,8 @@ altText="A picture of an empty windows folder."
 Fill in some information (as you would with any regular commit) and click **commit changes** (yes, commit directly to the main branch). Once done, go back to the main page (click `< > code` to return). You should see that there has been another commit and our `hello.txt` file is present.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/hellotxt_addition.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/hellotxt_addition.png"
+    altText="A picture of an empty windows folder."
 />
 
 Finally, go back to your repository. Run the command `git pull` and you should have the changes locally. You may encounter warning text the first time you run `git pull` as git requires some guidance on how you want to reconcile divergent branches. For the purposes of this course, if you encounter the error you can run this line: `git config pull.rebase false`. Now git pull will integrate the changes via a merge.
@@ -473,8 +473,8 @@ Finally, go back to your repository. Run the command `git pull` and you should h
 Using Github Desktop, the process is quite simple. Perform the same actions as the Git specific tutorial above, until you are supposed to run the command `git pull`. Instead, navigate to your Github Desktop and press `Fetch changes` next to `Current branch`. The button should change into `Pull origin`, which you may then press to receive the remote changes in your local machine.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_fetch_pull.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_fetch_pull.png"
+    altText="A picture of an empty windows folder."
 />
 
 ### 4.3.4 Conflicts :(
@@ -496,8 +496,8 @@ Let's simulate another example:
 Now go into Github, and similarly to our previous example to focused on `git push`, we'll perform some changes directly on Github. Click the `helloWorld.js` file on Github and you should find yourself here:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_edit_js_file.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_edit_js_file.png"
+    altText="A picture of an empty windows folder."
 />
 
 Now click the pen icon (roughly top right, underneath _History_) to enter edit mode. We now find ourselves in an online editor again. Change the line to `console.log("Hello Remote!")`. Click the _Commit changes_ button in the top right to commit (directly on the main branch).
@@ -520,29 +520,29 @@ Let's head back to our overview (click the `< > Code` button in the _almost_ top
 (example for Github Desktop project)
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/github_desktop_new_changes.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/github_desktop_new_changes.png"
+    altText="A picture of an empty windows folder."
 />
 
 (example for Git with Terminal project)
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/recent_pushes_github.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/recent_pushes_github.png"
+    altText="A picture of an empty windows folder."
 />
 
 Press `Compare & pull request` and it should look like the following:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/open_pull_request_no_merge.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/open_pull_request_no_merge.png"
+    altText="A picture of an empty windows folder."
 />
 
 This is where you create requests to merge branches together in Github, which are later reviewed (to ensure the changes are of quality). Further down the page, you can see a summary of the changes when attempting to merge the two branches:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/incompatible_merge_changes.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/incompatible_merge_changes.png"
+    altText="A picture of an empty windows folder."
 />
 
 In essence, your git (and Github by extension) realized that there were two different commits both trying to change the first line of the JavaScript file. We now need to solve the issue by either:
@@ -554,15 +554,15 @@ In essence, your git (and Github by extension) realized that there were two diff
 Click on the green button `Create pull request` on the same page. You should arrive here:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/create_pull_request_fix_conflict.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/create_pull_request_fix_conflict.png"
+    altText="A picture of an empty windows folder."
 />
 
 Observe Github prompts you to resolve the conflicts before the branch can be automatically merged. Click on the button `Resolve conflicts` and you'll enter an online editor (this can be done locally, but for this example we're doing it in Github):
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/online_editor_base_conflict.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/online_editor_base_conflict.png"
+    altText="A picture of an empty windows folder."
 />
 
 You'll notice these are the changes from both branches, separated by many equal signs and boxed in by several `<<<<<` and `>>>>>>`. These are the lines Github needs help solving, as it is rarely every line in a file that causes a merge conflict.
@@ -570,22 +570,22 @@ You'll notice these are the changes from both branches, separated by many equal 
 The first part underneath the first line `<<<<< local-branch` are the changes from `local-branch`, while the second are the changes from the `main` branch. If we want to save only the `local-branch` changes, we would change the file accordingly:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/online_editor_local_only.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/online_editor_local_only.png"
+    altText="A picture of an empty windows folder."
 />
 
 If we instead want the changes from main, we would do the following:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/online_editor_main_only.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/online_editor_main_only.png"
+    altText="A picture of an empty windows folder."
 />
 
 Or if we want to merge the changes to keep both, we remove the arrows and equal signs to mark we want the first two lines from `local-branch` and move the first line from `main` to the third line (observe the screenshot below).
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/online_editor_combination.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/online_editor_combination.png"
+    altText="A picture of an empty windows folder."
 />
 
 Without the equal sign and arrow markers, git now knows you want them on lines 1, 2 and 3.
@@ -593,22 +593,22 @@ Without the equal sign and arrow markers, git now knows you want them on lines 1
 Once the conflict is resolved, click `Mark as resolved` to the far right. In this case, we'll use the option of keeping all the lines from both branches. Once clicked, you'll see a green checkmark and now you're able to click `Commit merge`:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/online_editor_resolved.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/online_editor_resolved.png"
+    altText="A picture of an empty windows folder."
 />
 
 Once clicked, you will return to the pull request and be able to click `Merge pull request` to merge the two:
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/pull_request_automerge_available.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/pull_request_automerge_available.png"
+    altText="A picture of an empty windows folder."
 />
 
 Do so and confirm the merge.
 
 <DynamicImageComponent
-  imagePath="/src/assets/chapter-4/pull_request_automerge_commit.png"
-  altText="A picture of an empty windows folder."
+    imagePath="/src/assets/chapter-4/pull_request_automerge_commit.png"
+    altText="A picture of an empty windows folder."
 />
 
 The merge is now complete and you're given the option to delete your branch. You don't have to, though since branches are often related to features or issues it often makes sense to. In the end, this depends on context.
