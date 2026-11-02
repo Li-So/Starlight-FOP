@@ -13,9 +13,17 @@ There may be some terminology you aren't familiar with in this chapter which isn
 
 ### Directory
 - A file system structure that contains references to other files and directories (in essence, a folder on your computer).
-- For instance, if you were looking at what is stored on your desktop, I would find that here (Windows): `C:\Users\sonlin\Desktop`
+- For instance, if you were looking at what is stored on your desktop, I would find that here (Windows): 
+
+```cmd
+C:\Users\sonlin\Desktop
+```
   - Those backslashes signify that the "folder" desktop, is actually inside another folder "sonlin", which is in another folder "Users". The C: is just what harddrive we're on, don't worry about it too much.
-  - This looks different if you're on Mac or Linux, more like this: `~/sonlin/Desktop$`
+  - This looks different if you're on Mac or Linux, more like this: 
+  
+```cmd
+~/sonlin/Desktop$
+```
 
 ### Terminal
 - Originally, a terminal was a physical device used to send input and output from a computing device.
@@ -23,7 +31,8 @@ There may be some terminology you aren't familiar with in this chapter which isn
 - A terminal window or terminal emulator is a text-only window that let's you interact with a _Command-Line Interface (CLI)_, which in turn allows you to interact with the "real brains", _the shell_.
 - Example terminal emulators:
   - Terminal (Mac)
-  - Windows Terminal
+  - CMD (Windows)
+  - Powershell (Windows)
   - Ghostty
   - Warp
 
@@ -66,10 +75,9 @@ In this subchapter, we will have a brief look at how to move around in a termina
 
 When you open a terminal, it is more than likely you start here:
 
-<DynamicImageComponent
-  imagePath="/src/assets/chapter-4/new_empty_terminal.png"
-  altText="A picture of an empty windows folder."
-/>
+```cmd
+linus@JU-5CD5196T1H:~$
+```
 
 The small `~` sign before `$` essentially shows we are in our home folder. It is normally the folder that contains your desktop folder, your documents folder, etc:
 
@@ -89,10 +97,9 @@ If you also happen to have _hidden files or directories_, you can use `ls -a` to
 
 Now that we know how to see where we are and what there is, we'll try to move around. To do this, you can use `cd <directory-name>` (short for _change directory_). Since I have different folders in my example, you can use `cd` into some other folder:
 
-<DynamicImageComponent
-  imagePath="/src/assets/chapter-4/ls_cd_basic.png"
-  altText="A picture of an empty windows folder."
-/>
+```cmd
+linus@JU-5CD5196T1H:~/FoP-Course-Content$
+```
 
 Note how the terminal now looks different, and `~` has changed into `~/FoP-Course-Content$`. This is a useful indicator of where we have moved. You can now use `ls` again and the contents of where you are should be listed.
 
