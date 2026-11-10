@@ -53,6 +53,7 @@ export default defineConfig({
                         },
                         { label: "Conditionals", slug: "guides/conditionals" },
                         { label: "Git & Github", slug: "guides/git-github" },
+                        { label: "Arrays", slug: "guides/arrays"},
                     ],
                 },
                 {
