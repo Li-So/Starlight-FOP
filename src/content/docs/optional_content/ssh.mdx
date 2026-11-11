@@ -1,0 +1,91 @@
+---
+title: Connecting with SSH
+description: The basics of setting up SSH and connecting it to Github
+---
+
+import { Steps } from "@astrojs/starlight/components";
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+import DynamicImageComponent from '/src/components/DynamicImageComponent.astro'
+
+
+This guide is effectively a semi-combination of this [SSH guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and this [SSH to Github guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account). It won't teach you everything about SSH, but as usual, it should be enough for this course. Since it can be a bit tricky to know what went wrong when setting it up the very first time, don't hesitate to ask for help or view some videos on the topic.
+
+The Secure Shell (SSH) protocol is a method for securely sending commands to a computer over some unsecured network. IT uses cryptography for authentication via public key cryptography and encrypts connections between devices. To actually use SSH, you will need to create a pair of public and private keys, which is rather simple.
+
+## Making some keys
+
+Windows, Linux and Mac use the same command for the creation of ssh keys:
+```bash
+ssh-keygen
+```
+
+The process will take your through a few steps which look almost the same across operating systems:
+
+<Steps>
+1. For the first step, it will ask where to save your keys, the standard being something like `/home/your_user/.ssh/id_rsa`. The type of key (e.g. id_rsa) may vary, as well as where it is stored depending on your operating system. For now, we'll just use the standard place.
+
+2. Next, it will ask for a passphrase. I advise you keep some memorable password for your ssh for security's sake (not entering one still works, just less secure).
+
+3. Finally, you should see that both keys have been saved and the key's `randomart`. Look below for an example of what that may look like. The process is now finished.
+
+</Steps>
+
+```bash
++---[RSA 3072]----+
+|          ..E.   |
+|   .       o. . .|
+|..o + . . .  o o |
+|.=.. = . = .= o  |
+|*..   + S *=.. . |
+|o=     + B+=..   |
+|+       o.*++ .  |
+|.         +. +   |
+|         . o+    |
++----[SHA256]-----+
+```
+
+Now that we have a public and private key, they are by default placed in a hidden `.ssh` folder. You'll need to access the public key (denoted with `.pub`) and hand it over to Github for them to know you are in fact who you claim to be. In order to see the file, navigate to e.g. `/home/your_user/` in the terminal and type `ls -a` to see hidden files. 
+
+<Tabs>
+<TabItem label="Windows">
+If you click the `View` tab in your file explorer, there should be an option to see hidden files. Enable it, and navigate to `C:\Users` and you should see a `.ssh` folder.
+</TabItem>
+<TabItem label="Mac">
+For Mac using Finder, it is Command + Shift + . (period). From there, try to go to your user folder and you should see the `.ssh` folder. 
+</TabItem>
+<TabItem label="Linux">
+File explorers on Linux vary so much that it is difficult to provide any sample. 
+</TabItem>
+</Tabs>
+
+Having somehow navigated to your `.ssh` folder, you should see it contain both your private and public keys, both with the same name. The difference is the public key has a `.pub`. 
+
+:::danger
+Never hand over your private key. Ever.
+:::
+
+## Connecting to Github
+
+If we then look at the public key file, we may see something like this (very long):
+```bash
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCSbGhjsW4OzrAvGnJ+cOIW3TDZMyTfLMp0QW2AR0Lj5vku3LVHmAa2MpVbnSjhWPAedZA3zUMwadB8pVOtDu9tQv9iZ1ltjGUE7BhdDWHBM+YXA2SCUcsDjjibSg62i6XxGCDm9HADNeUFZgeTDz3m5RP2z8ydnK6JBrbL/g7cDskXiGCNDELFl72WzuJT0/zADNSDZIoQpe6u+k4OoojlSuxwQ5qg3eN8W88ahPn7WYbyX2I0dLuWED3mzw2IN16hiqDkJ0nqy1ghaG2xz5z7khusc+HFibhUqEKDRl2qyEzDYxSiVTP4I+HjqzZb1iN265II452K/HhmON2ovhGjc9/+VxVvQMfNCF20PqOEs8RTola7YRG59nZlEX43Jq44Pll5pUs+zypi2P4RP3+4C61z1y2mAZ7WmCaxvduXJJOUUhZRAsvguO2jarT6+XMjmkllFWJpAwFp30LeDRM/zw++vLtEv7zz0EvzQjVly2RmR+w3Wtoi91j54UJOLtE= linus@JU-5CD5196T1H
+```
+
+This is what we will provide to Github and have them use to verify we are who we say we are. Login to Github and navigate to your settings (click your profile picture in the top right and you should see a dropdown menu).
+
+Once in settings, you should see an option called `SSH and GPG keys`. Navigating there, you can create a new key with some title (purely for remembering which key it is, you may choose the name as you wish) and a space for the key itself. Paste in the contents of the public key and save.
+
+Hopefully you receive the message that the key was saved successfully. We can of course verify whether this works in a few different ways, the most straightforward being to try and clone a repository from Github. If you proceed into some repository (e.g. your final assignment repository), you can clone it to your computer by copying from the `Code` section:
+
+<DynamicImageComponent
+    imagePath="/src/assets/extras/cloning.png"
+    altText="Cloning a repository on Github."
+/>
+
+Then write the following in a terminal where you want your project on your computer:
+
+```bash
+git clone git@github.com:Li-So/Starlight-FOP.git
+```
+
+And you should now see the project being pulled from Github, assuming everything worked. 

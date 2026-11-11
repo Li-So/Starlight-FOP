@@ -62,6 +62,10 @@ export default defineConfig({
                             label: "Shells and Terminals",
                             slug: "optional_content/shells-terminals",
                         },
+                        {
+                            label: "SSH and Github",
+                            slug: "optional_content/ssh",
+                        }
                     ],
                 },
             ],
