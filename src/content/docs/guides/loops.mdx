@@ -1,12 +1,12 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Loops
+description: A guide to loops in JavaScript.
 ---
 
 
-Remember the code from *Chapter 2 - Variables & Functions* where you wrote a program that counts upwards? While we managed to make it more efficient by reusing code, it's still a tedious and extremely inefficient way to do it if counting to e.g. 100. Instead, we can use loops that *repeat* code a number of times, depending on conditions we set.
+Remember the code from the Variables & Functions section where you wrote a program that counts upwards? While we managed to make it more efficient by reusing code, it's still a tedious and extremely inefficient way to do it if counting to e.g. 100. Instead, we can use loops that *repeat* code a number of times, depending on conditions we set.
 
-## 5.1 while
+## Using while
 The first and "easiest" type of loop is the while loop:
 ```js
 while(true){
@@ -17,6 +17,7 @@ while(true){
 To enter the loop, the condition inside of the parentheses must be true, executing the code inside. Once the code has been executed, it will loop back, checking the condition once again before looping. Assuming the condition is forever true, the loop will never stop (beware the infinite loop). Each lap of the loop is called an *iteration*.
 
 Let's say we want to count to 10 using a regular while-loop:
+
 ```js
 let x = 1;
 
@@ -42,7 +43,7 @@ In the example above, we used a condition that won't be true forever (though it 
 
 There are cases wherein we want the program to run for an undecided amount of time, such as in a text-based terminal game, for which the while loop can be appropriate.
 
-If, during the iterations, we want specific actions or conditions to affect the loop, we can use keywords `break` and `continue`. Using `break`, similarly to when using switch statements (see chapter 3), will stop the while loop and exit. The program below illustrates a break , ending the loop when `n === 3`:
+If, during the iterations, we want specific actions or conditions to affect the loop, we can use keywords `break` and `continue`. Using `break`, similarly to when using switch statements (see earlier conditionals section), will stop the while loop and exit. The program below illustrates a break , ending the loop when `n === 3`:
 
 ```js
 let i = 1;
@@ -71,7 +72,7 @@ while (i < 5) {
     console.log("Counting... " + i);
 }
 ```
-## 5.2 do ... while
+## do ... while
 
 In certain situations, you may want to perform a minimum of one iteration, with more being optional depending on a condition. In those cases, you can use a do... while loop:
 ```js
@@ -89,7 +90,7 @@ do {
 ```
 
 Otherwise, the same principles apply. The possibility remains to be trapped in an infinite loop, you can use `break` to stop early or continue to re-evaluate the condition.
-## 5.3 for loop
+## for loop
 The for-loop creates a loop with three optional expressions, typically in this format:
 ```js
 for(let i = 0; i < 5; i++){
@@ -122,10 +123,10 @@ for(let i = 0; i < 5; i++){
 
 For loops are best used when you know the exact number of iterations you want to perform, while while loops are used when the number of iterations may be uncertain.
 
-## 5.4 Loop tasks
+## Loop tasks
 These tasks won't be particularly challenging and may seem rather random. Most tasks in chapter 6 will require loops to be solved (and make for more interesting tasks), so consider these a warm-up to become more comfortable with just looping. You can make `while` and `for` operate functionally in the same manner, so use what you prefer (but know them both).
 
-### 5.4.1 Counting normally
+### Counting normally
 Make a function that counts from 1 to 50 and prints each number. E.g:
 ```shell
 1
@@ -144,7 +145,7 @@ Tips:
 
 - Use what you've learned above!
 
-### 5.4.2 Counting... Doubles!
+### Counting... Doubles!
 Make a function that counts only even numbers (up to 50). E.g:
 ```shell
 2
@@ -168,7 +169,7 @@ Tips:
 	- Changing the iterations (consider substituting i++)
 	- Using `continue`
 
-### 5.4.3 Counting backwards
+### Counting backwards
 Make a function that counts backwards from 100, but does not print any number between 40 and 60 that is divisible by 2. E.g:
 
 ```shell
@@ -193,7 +194,7 @@ Tips:
 - Using modulus would be appropriate here ( % )
 - Keep in mind you should reduce the starting number to count backwards.
 
-### 5.4.4 Exponentiation What-If
+### Exponentiation What-If
 Let's imagine for a moment that we cannot use the exponentiation operator (\*\*). Try to implement it on your own using loops!
 
 ```js
