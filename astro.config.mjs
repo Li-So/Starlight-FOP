@@ -53,8 +53,9 @@ export default defineConfig({
                         },
                         { label: "Conditionals", slug: "guides/conditionals" },
                         { label: "Git & Github", slug: "guides/git-github" },
-                        {label: "Loops", slug: "guides/loops"},
-                        { label: "Arrays", slug: "guides/arrays"},
+                        { label: "Loops", slug: "guides/loops" },
+                        { label: "Arrays", slug: "guides/arrays" },
+                        { label: "Object-Oriented Programming", slug: "guides/oop" },
                     ],
                 },
                 {
@@ -67,7 +68,7 @@ export default defineConfig({
                         {
                             label: "SSH and Github",
                             slug: "optional_content/ssh",
-                        }
+                        },
                     ],
                 },
             ],
