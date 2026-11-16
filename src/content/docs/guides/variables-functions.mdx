@@ -224,6 +224,32 @@ function calculateSleep() {
 }
 ```
 
+### Parameters, arguments and a switcheroo
+Let's do an experiment to learn the differences between parameters and arguments. Look at the code below:
+
+```js
+function sayName(firstName, lastName){
+  console.log(firstName + " " + lastName);
+}
+
+```
+
+In our function `sayName(firstName, lastName)` we have three **parameters**, `x`, `y` and `z`. If we wanted to **call** the function, we provide the actual values, the **arguments** in this fashion:
+
+```js
+const x = 1;
+const y = 2
+const z = 3;
+
+function complexCalculation(x, y, z){
+  console.log(x + y - z);
+}
+
+complexCalculation(x, y, z);
+```
+
+The expected print would be simply `0` since `1 + 2 - 3 = 0`. Assuming I wanted the result to instead result in the value `2`, how might I change my function call with respect to parameters and arguments to get the value `2`?
+
 ### Program turn-order
 
 Let's assume there are a number of people playing something similar to UNO, where you can force other players to skip their turns. If this variant of UNO allowed multiple skips, it may be hard to know whose turn it really is.
