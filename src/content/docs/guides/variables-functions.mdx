@@ -23,13 +23,13 @@ In tasks during the coming chapters, you will encounter this:
 Recall that a double slash ( _//_ ) is a _comment_ and will _not_ be run as code. The comment merely means I expect _you_ to implement the function. Feel free to either delete it or write below it.
 :::
 
-## 2.1 Basic functions
+## Basic functions
 
 :::danger[Naming a file]{}
 Please note that the file needs to end with .js, for instance. This is very important, as it will not be recognized as JavaScript without it.
 :::
 
-### 2.1.1 Count to Three
+### Count to Three
 
 Remember how you've previously used this:
 
@@ -59,7 +59,7 @@ countToThree(); // This one!
 
 Now you should see 1, 2, 3 (on separate lines) in your terminal!
 
-### 2.1.2 Count to Four
+### Count to Four
 
 Now let's assume we want to create a program that writes `1, 2, 3, 4` instead. We could write the same function `countToThree()` again, add a fourth log and rename it `countToFour()`. That would be inefficient though, as we've already done a majority of the work in `countToThree()`. Therefore we will reuse it.
 
@@ -75,9 +75,9 @@ Change the code above so that it counts all the way to four by doing the followi
 - Make `countToFour()` print a 4 using `console.log()` after the call to `countToThree()`.
 - Call the `countToFour()` function!
 
-## 2.2 Variables in functions
+## Variables in functions
 
-### 2.2.1 The Pythagorean Theorem
+### The Pythagorean Theorem
 
 Don't worry, we won't deep dive into mathematics in this course, but it makes for a good example in this case. We'll be writing everything inside of a function for the coming task, but there will be explanations. According to the Pythagorean theorem, in a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares on the lengths of the other two sides. If you'd like a quick reminder, [read here](https://en.wikipedia.org/wiki/Pythagorean_theorem).
 
@@ -109,7 +109,7 @@ Explanation:
 - Finally, the `console.log()` mixes strings and numbers to present us with the result.
 - Try calling the function!
 
-### 2.2.2 Using parameters and arguments
+### Using parameters and arguments
 
 In the previous implementation of `calculateHypotenuse()`, we always calculate the same triangle. Therefore, we will change the current to use parameters, allowing the caller to provide us the values for a and b. Let's also get rid of some unnecessary variables.
 
@@ -150,7 +150,7 @@ Some things to make special note of:
   - _calling the function with `a = 3` and `b = 2`_
   - The reason being that the variables declared outside of the function are **completely separate** from the variables declared outside. Variables only exist in their local scope where they are declared.
 
-### 2.2.3 Returning a value
+### Returning a value
 
 In the next version of this function, we will add `return c;` to the very bottom. This will enable us to use the value calculated by the function to do something else later:
 
@@ -171,7 +171,7 @@ console.log("The length of the hypotenuse is " + length);
 
 By using return c, we can now access the value outside of the function.
 
-### 2.2.4 Making the function clean
+### Making the function clean
 
 ```js
 function calculateHypotenuse(a, b) {
@@ -200,9 +200,9 @@ Another variant using an arrow function:
 calculateHypotenuse = (a, b) => Math.sqrt(a * a + b * b);
 ```
 
-## 2.3 Tasks (functions & variables)
+## Tasks (functions & variables)
 
-### 2.3.1 Program printFullName
+### Program printFullName
 
 Make a simple program that takes two parameters: `firstName` and `lastName`. Return the person's full name so that it prints like this:
 
@@ -212,7 +212,7 @@ console.log(fullName);
 // Prints: Linus Sonnerhed
 ```
 
-### 2.3.2 Improve the function
+### Improve the function
 
 This function isn't very clean, nor could we reuse it if the variables were different. Re-write or _refactor_ (the programmer name for it) the function to improve it.
 
@@ -224,7 +224,7 @@ function calculateSleep() {
 }
 ```
 
-### 2.3.3 Program turn-order
+### Program turn-order
 
 Let's assume there are a number of people playing something similar to UNO, where you can force other players to skip their turns. If this variant of UNO allowed multiple skips, it may be hard to know whose turn it really is.
 
@@ -249,7 +249,7 @@ Tips:
 
 - There may be a use for the _modulus operator_ (`%`) in this case...
 
-### 2.3.4 Program calculateBookCost
+### Program calculateBookCost
 
 Sometimes buying books for hundreds of SEK may feel expensive (especially as a computer science student for which much material can be found for free). As a coping mechanism, one may consider calculating the cost per hour of reading, to make it more bearable.
 
@@ -278,7 +278,7 @@ Some tips:
 - Print the cost of the book per hour!
   - If you want to make it look prettier, use `.toFixed(2)` on a variable to set a two decimal accuracy, e.g. `bookCost.toFixed(2)`
 
-### 2.3.5 Change Calculation
+### Change Calculation
 
 Let's assume you're working at a coffeeshop and need a quick way to calculate change. There are coins and bills of these values: 500, 200, 100, 20, 10, 5, 2, 1. If you call the function which you are about to create, `printChange(947)`, it should print the following:
 

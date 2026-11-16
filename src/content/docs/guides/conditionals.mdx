@@ -3,7 +3,7 @@ title: Conditionals
 description: A walkthrough of conditionals in JavaScript.
 ---
 
-## 3.1. Booleans and logical expressions
+## Booleans and logical expressions
 A variable of the type boolean only has the values true and false. Note the code below with some examples using booleans:
 
 ```js
@@ -78,7 +78,7 @@ function testBooleans(){
 }
 ```
 
-## 3.2 Boolean coercion
+## Boolean coercion
 In JavaScript, we don't always have to use explicit booleans for expressions to be evauluated. Several built-in operations that expect booleans first *coerce* their arguments to booleans. These are summarized as follows:
 
 - Booleans are returned as-is
@@ -96,7 +96,7 @@ There are only a handful of values that are coerced into false, called falsy val
 - Using double NOT `!!x`, negates the value x twice, converting it into a boolean
 - The Boolean() function: `Boolean(x)` converts x into a boolean in the same way as above.
 
-## 3.3. if / else statements
+## if / else statements
 The if and else statements allow you to execute code based on conditions. An if statement consists of a boolean expression, written inside of parentheses and some code to be executed *if* the expression results to true. *Else* is used when that statement isn't true.
 
 ```js
@@ -123,8 +123,8 @@ if(isLoggedIn){
 }
 ```
 
-## 3.4 Tasks (if / else)
-### 3.4.1 Age Check
+## Tasks (if / else)
+### Age Check
 Implement a function that takes three boolean arguments:
 
 - Age
@@ -146,7 +146,7 @@ function canLegallyDrink(age, hasPassport, hasID) {
 }
 ```
 
-### 3.4.2 A potentially stealthy bug
+### A potentially stealthy bug
 In the function below, there are is a fairly common error that might be hard to spot. Correct it!
 
 ```js
@@ -164,7 +164,7 @@ function calculateAverage(sum, numbers) {
 calculateAverage(a, b);
 ```
 
-### **3.4.3 if-else string concatenation**
+### if-else string concatenation
 Let's practice some conditionals. We want to receive some number n, then create a string depending on what it is divisible by. In this case, we'll only check whether it is divisible by 3, 5 or both. If it is divisible by 3, add *"Fizzle "* to the string. If divisible by 5, add the string *"Pop "*. If divisible by both 3 and 5, add only *"FizzlePop "*. 
 
 Tips:
@@ -174,7 +174,7 @@ Tips:
 
 ---
 
-## 3.5 switch statements
+## switch statements
 Let's imagine we have a variable called fruit. It's a string variable containing the name of a fruit, and we want to print something special depending on what type of fruit it is. We could write if statements:
 ```js
 if(fruit === "Papaya"){
@@ -316,9 +316,9 @@ switch (true) {
 }
 ```
 
-## 3.6 Tasks (switch)
+## Tasks (switch)
 
-### 3.6.1 Categories of food
+### Categories of food
 Convert the following function from using if-else to using switch:
 ```js
 function getFoodCategory(food){
@@ -336,7 +336,7 @@ function getFoodCategory(food){
 }
 ```
 
-### 3.6.2 switch string concatenation
+### switch string concatenation
 Remember the if-else string concatenation task using if and if-else statements? Try to reconstruct it using a switch statement instead.
 ```js
 // This is one solution to the issue:
